@@ -136,7 +136,7 @@ The following example is a copy of the /examples/features/standard/queue example
    <parent>
       <groupId>org.apache.activemq.examples.broker</groupId>
       <artifactId>jms-examples</artifactId>
-      <version>1.0.1-SNAPSHOT</version>
+      <version>1.0.1-wildfly-1-SNAPSHOT</version>
    </parent>
 
    <artifactId>queue</artifactId>
