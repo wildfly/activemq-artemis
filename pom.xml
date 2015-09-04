@@ -20,7 +20,7 @@
    <groupId>org.apache.activemq</groupId>
    <artifactId>artemis-pom</artifactId>
    <packaging>pom</packaging>
-   <version>1.0.1-wildfly-1-SNAPSHOT</version>
+   <version>1.1.0-wildfly-1</version>
 
    <parent>
       <groupId>org.apache</groupId>
@@ -109,7 +109,7 @@
       <connection>scm:git:git@github.com:wildfly/activemq-artemis.git</connection>
       <developerConnection>scm:git:git@github.com:wildfly/activemq-artemis.git</developerConnection>
       <url>https://github.com/wildfly/activemq-artemis:wq</url>
-      <tag>HEAD</tag>
+      <tag>1.1.0-wildfly-1</tag>
    </scm>
 
    <distributionManagement>
