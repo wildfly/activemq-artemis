@@ -138,7 +138,7 @@ public class RefsOperation extends TransactionOperationAbstract {
             ackedTX.commit(true);
          }
          catch (Exception e) {
-            e.printStackTrace();
+            ActiveMQServerLogger.LOGGER.warn(e.getMessage(), e);
          }
       }
    }

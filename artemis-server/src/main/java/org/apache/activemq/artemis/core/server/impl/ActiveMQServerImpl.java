@@ -749,7 +749,7 @@ public class ActiveMQServerImpl implements ActiveMQServer {
             serverSession.close(true);
          }
          catch (Exception e) {
-            e.printStackTrace();
+            ActiveMQServerLogger.LOGGER.errorClosingSession(e);
          }
       }
    }
