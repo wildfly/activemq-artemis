@@ -78,6 +78,7 @@ import org.apache.activemq.artemis.spi.core.remoting.ConnectionLifeCycleListener
 import org.apache.activemq.artemis.utils.ConfigurationHelper;
 import org.apache.activemq.artemis.utils.ActiveMQThreadFactory;
 import org.apache.activemq.artemis.utils.TypedProperties;
+import org.jboss.logging.Logger;
 
 /**
  * A Netty TCP Acceptor that supports SSL
@@ -168,6 +169,8 @@ public class NettyAcceptor implements Acceptor {
    private final boolean httpUpgradeEnabled;
 
    private final long connectionsAllowed;
+
+   private static final Logger logger = Logger.getLogger(NettyAcceptor.class);
 
    public NettyAcceptor(final String name,
                         final ClusterConnection clusterConnection,
@@ -497,8 +500,7 @@ public class NettyAcceptor implements Acceptor {
             notificationService.sendNotification(notification);
          }
          catch (Exception e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            logger.warn("failed to send notification",e.getMessage(),e);
          }
       }
 
